@@ -3,6 +3,7 @@ on: push
 
 jobs:
   helllo:
+    name: " helloagain"
     runs-on: ubuntu-latest
 
     steps:
@@ -15,4 +16,6 @@ jobs:
         python-version: '3.13'
 
     - name: run python
-      run: python hello.py
+      run: |
+       python hello.py
+       python hey.py
