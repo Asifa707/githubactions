@@ -1,0 +1,46 @@
+# Display name of workflow
+name: 5jobs
+on:
+  workflow_dispatch:
+
+    inputs:
+      run-job-1:
+        description: "Run job 1"
+        required: true
+        type: boolean
+      run-job-2:
+        description: "Run job 2"
+        required: true
+        type: boolean
+      run-job-3:
+        description: "Run job 2"
+        required: true
+        type: boolean
+jobs:
+  job-1:
+    name: job1
+    runs-on: ubuntu-latest
+    steps:
+      - name: output for job 1
+        run: echo "hello from job 1"
+
+  job-2:
+    name: job2
+    runs-on : ubuntu-latest
+    steps:
+      - name: output for job2
+        run: echo "hello from job2"
+
+
+  job-3:
+    name: job3
+    runs-on : ubuntu-latest
+    steps:
+      - name: output for job3
+        run: echo "hello from job3"
+
+
+
+
+
+    
